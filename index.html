@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>SKIN1004 Centella Ampoule Foam | رغوة تنظيف لطيفة 125ml</title>
+  <meta name="description" content="رغوة SKIN1004 Centella Ampoule Foam لتنظيف لطيف بدون جفاف. منخفضة الحموضة، خالية من العطور، نباتية وخالية من القسوة. حجم 125ml." />
+  <meta name="theme-color" content="#BFD4E6"/>
+
+  <!-- OG -->
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="SKIN1004 Centella Ampoule Foam | رغوة تنظيف لطيفة 125ml" />
+  <meta property="og:description" content="تنظيف لطيف يزيل المكياج والدهون والشوائب بدون جفاف. pH منخفض، بدون عطر، نباتي وخالي من القسوة." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1585232351009-aa87416fca90?auto=format&fit=crop&w=1200&q=60" />
+
+  <!-- Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Icy / clean palette (fits Centella line) */
+      --bg0:#F6F9FC;
+      --bg1:#FFFFFF;
+      --ink:#101828;
+      --muted:#5C677D;
+
+      --brand:#BFD4E6;
+      --brand2:#E6EEF6;
+      --brand3:#9FBBD4;
+
+      --silver:#E9ECF1;
+      --glass:rgba(255,255,255,.72);
+      --stroke:rgba(16,24,40,.10);
+
+      --ok:#16a34a;
+      --warn:#f59e0b;
+
+      --shadow: 0 18px 55px rgba(16,24,40,.12);
+      --shadow2: 0 10px 28px rgba(16,24,40,.10);
+      --radius: 20px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 12% 10%, rgba(191,212,230,.45), transparent 55%),
+        radial-gradient(900px 600px at 88% 14%, rgba(233,236,241,.75), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg0));
+      overflow-x:hidden;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:auto; padding:18px 14px 80px}
+
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      padding:10px 12px;
+      border:1px solid var(--stroke);
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 26px rgba(16,24,40,.06);
+      position:sticky; top:10px; z-index:20;
+    }
+    .brandMark{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background:linear-gradient(135deg, var(--brand3), var(--brand));
+      box-shadow:0 0 0 6px rgba(191,212,230,.35);
+      flex:0 0 auto;
+    }
+    .pill{
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      font-size:13px; color:var(--muted);
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.62));
+      box-shadow: 0 12px 30px rgba(16,24,40,.08);
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .badge .tick{
+      width:18px; height:18px; border-radius:6px;
+      background:rgba(22,163,74,.12);
+      display:grid; place-items:center;
+      color:var(--ok);
+      font-weight:900;
+      border:1px solid rgba(22,163,74,.22);
+    }
+
+    /* HERO */
+    .hero{
+      margin-top:14px;
+      border-radius:var(--radius2);
+      background:
+        radial-gradient(900px 520px at 18% 20%, rgba(191,212,230,.55), transparent 58%),
+        radial-gradient(900px 520px at 92% 18%, rgba(233,236,241,.90), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.66));
+      border:1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(600px 220px at 20% 0%, rgba(159,187,212,.35), transparent 55%),
+        radial-gradient(600px 220px at 80% 0%, rgba(191,212,230,.28), transparent 55%);
+      pointer-events:none;
+      filter: blur(.2px);
+    }
+    .heroInner{
+      position:relative;
+      padding:18px 16px 14px;
+      display:grid;
+      gap:14px;
+    }
+    .kicker{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .kicker .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.75);
+      backdrop-filter: blur(8px);
+      font-weight:700;
+      color:var(--ink);
+    }
+    .kicker .chip span{color:var(--muted); font-weight:600}
+
+    h1{
+      margin:0;
+      font-size:26px;
+      line-height:1.25;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      line-height:1.9;
+      font-size:15px;
+    }
+
+    .priceBar{
+      display:grid; gap:10px;
+      padding:12px;
+      border-radius:18px;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow2);
+    }
+    .prices{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      flex-wrap:wrap;
+    }
+    .now{
+      display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    }
+    .now .val{font-size:28px; font-weight:900}
+    .now .cur{font-weight:800; color:var(--muted)}
+    .old{
+      color:var(--muted);
+      text-decoration:line-through;
+      font-weight:700;
+      font-size:14px;
+    }
+    .save{
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      font-size:13px; color:var(--muted);
+    }
+    .save .hot{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(245,158,11,.12);
+      border:1px solid rgba(245,158,11,.22);
+      color:#9a5a00;
+      font-weight:900;
+    }
+
+    .heroGrid{
+      display:grid;
+      gap:14px;
+    }
+    @media (min-width: 980px){
+      .heroInner{padding:22px 22px 18px}
+      .heroGrid{
+        grid-template-columns: 1.05fr .95fr;
+        align-items:start;
+      }
+      h1{font-size:34px}
+      .sub{font-size:16px}
+    }
+
+    /* SECTION */
+    .section{
+      margin-top:14px;
+      border-radius:var(--radius2);
+      border:1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      background:rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+    }
+    .sectionHeader{
+      padding:14px 14px 0;
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      flex-wrap:wrap;
+    }
+    .sectionHeader h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sectionHeader p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .sectionBody{padding:14px}
+    .toneA{background:linear-gradient(180deg, rgba(191,212,230,.22), rgba(255,255,255,.84))}
+    .toneB{background:linear-gradient(180deg, rgba(233,236,241,.58), rgba(255,255,255,.84))}
+    .toneC{background:linear-gradient(180deg, rgba(159,187,212,.16), rgba(255,255,255,.84))}
+
+    /* GALLERY PLACEHOLDER */
+    .gallery{
+      display:grid;
+      gap:12px;
+    }
+    .mainShot{
+      position:relative;
+      border-radius:22px;
+      border:1px solid var(--stroke);
+      overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+      box-shadow: 0 16px 40px rgba(16,24,40,.10);
+      cursor: zoom-in;
+      min-height: 260px;
+      display:grid;
+      place-items:center;
+    }
+    .mainShot .ph{
+      text-align:center;
+      padding:18px;
+      color:var(--muted);
+      line-height:1.9;
+      max-width: 520px;
+    }
+    .ph b{color:var(--ink)}
+    .ph code{
+      display:inline-block;
+      direction:ltr;
+      padding:4px 8px;
+      border-radius:10px;
+      border:1px solid var(--stroke);
+      background:rgba(233,236,241,.55);
+      color:var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px;
+    }
+    .mainHint{
+      position:absolute;
+      left:12px; top:12px;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--stroke);
+      color:var(--muted);
+      font-size:12px;
+      backdrop-filter: blur(10px);
+    }
+    .thumbs{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+    }
+    @media (min-width: 560px){
+      .thumbs{grid-template-columns: repeat(6, 1fr);}
+    }
+    .thumb{
+      border-radius:16px;
+      border:1px solid var(--stroke);
+      overflow:hidden;
+      background:#fff;
+      cursor:pointer;
+      position:relative;
+      aspect-ratio: 1 / 1;
+      display:grid; place-items:center;
+    }
+    .thumb .miniPh{
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      padding:10px;
+      line-height:1.6;
+    }
+    .thumb[aria-current="true"]{
+      outline: 3px solid rgba(159,187,212,.65);
+      border-color: rgba(159,187,212,.55);
+    }
+
+    /* CONTENT GRID */
+    .grid2{
+      display:grid; gap:12px;
+    }
+    @media (min-width: 900px){
+      .grid2{grid-template-columns: 1fr 1fr;}
+    }
+    .card{
+      border:1px solid var(--stroke);
+      border-radius:20px;
+      background:rgba(255,255,255,.82);
+      padding:12px;
+    }
+    .list{
+      margin:0; padding:0 18px 0 0;
+      color:var(--muted);
+      line-height:1.95;
+      font-size:14px;
+    }
+    .list li{margin:8px 0}
+    .kpi{
+      display:grid; gap:10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 520px){
+      .kpi{grid-template-columns: repeat(4, 1fr);}
+    }
+    .k{
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+      text-align:center;
+    }
+    .k b{display:block; font-size:14px}
+    .k span{display:block; font-size:12px; color:var(--muted); margin-top:4px}
+
+    /* DETAILS/ACCORDION */
+    details{
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      background:rgba(255,255,255,.86);
+      padding:10px 12px;
+      margin:10px 0;
+      box-shadow: 0 10px 26px rgba(16,24,40,.06);
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      font-weight:800;
+    }
+    summary::-webkit-details-marker{display:none}
+    .sumRight{display:flex; align-items:center; gap:10px}
+    .chev{
+      width:28px; height:28px; border-radius:10px;
+      display:grid; place-items:center;
+      border:1px solid var(--stroke);
+      background:rgba(191,212,230,.26);
+      color:var(--muted);
+      flex:0 0 auto;
+      transition: transform .18s ease;
+    }
+    details[open] .chev{transform: rotate(180deg)}
+    .detailBody{
+      margin-top:10px;
+      color:var(--muted);
+      line-height:1.95;
+      font-size:14px;
+    }
+
+    /* WHY BUY */
+    .why{
+      display:grid; gap:10px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 860px){
+      .why{grid-template-columns: repeat(4, 1fr);}
+    }
+    .whyItem{
+      border:1px solid var(--stroke);
+      border-radius:20px;
+      padding:12px;
+      background:rgba(255,255,255,.84);
+    }
+    .whyItem b{display:flex; align-items:center; gap:8px}
+    .whyItem p{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.85}
+
+    /* FORM PLACEHOLDER */
+    .formBox{
+      border:1px dashed rgba(16,24,40,.22);
+      border-radius:22px;
+      padding:14px;
+      background:rgba(255,255,255,.80);
+      color:var(--muted);
+      line-height:1.95;
+    }
+    .formBox code{
+      display:block;
+      margin-top:10px;
+      padding:10px;
+      border-radius:16px;
+      background:rgba(233,236,241,.62);
+      border:1px solid var(--stroke);
+      color:var(--ink);
+      direction:ltr;
+      overflow:auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px;
+    }
+
+    /* LIGHTBOX */
+    .lb{
+      position:fixed;
+      inset:0;
+      background:rgba(10,15,25,.62);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:60;
+      padding:18px;
+    }
+    .lb.open{display:flex}
+    .lbBox{
+      max-width:min(980px, 96vw);
+      width:100%;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 90px rgba(0,0,0,.35);
+      position:relative;
+    }
+    .lbImg{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#fff;
+    }
+    .lbClose{
+      position:absolute;
+      top:10px; left:10px;
+      width:44px; height:44px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      font-size:22px;
+      display:grid; place-items:center;
+      cursor:pointer;
+    }
+    .lbNav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:48px; height:48px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      font-size:22px;
+      display:grid; place-items:center;
+      cursor:pointer;
+      user-select:none;
+    }
+    .lbPrev{right:10px}
+    .lbNext{left:10px}
+
+    footer{
+      margin-top:14px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      padding:14px 6px;
+      opacity:.95;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar" aria-label="Top bar">
+      <div class="brandMark">
+        <span class="dot" aria-hidden="true"></span>
+        <span>To You</span>
+      </div>
+      <div class="pill">
+        <span class="badge"><span class="tick">✓</span> أصلي 100%</span>
+        <span class="badge">🫧 تنظيف لطيف</span>
+        <span class="badge">🌿 بدون عطر</span>
+        <span class="badge">⚖️ pH منخفض</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="heroInner">
+        <div class="kicker">
+          <span class="chip">SKIN1004 <span>•</span> Korea 🇰🇷</span>
+          <span class="chip">Centella <span>•</span> Ampoule Foam</span>
+          <span class="chip">125ml <span>•</span> Low pH</span>
+        </div>
+
+        <div class="heroGrid">
+          <div>
+            <h1>Centella Ampoule Foam</h1>
+            <p class="sub">
+              رغوة تنظيف لطيفة تزيل بقايا المكياج والدهون الزائدة والشوائب <b>بدون جفاف</b>.
+              مناسبة كغسول يومي أو كـ <b>الخطوة الثانية</b> في التنظيف المزدوج.
+            </p>
+
+            <div class="priceBar" aria-label="Price">
+              <div class="prices">
+                <div class="now">
+                  <span class="val">879</span>
+                  <span class="cur">جنيه</span>
+                </div>
+                <div style="text-align:left">
+                  <div class="old">1100 جنيه</div>
+                </div>
+              </div>
+              <div class="save">
+                <span class="hot">خصم ~20% 🔥</span>
+                <span>وفّر <b>221</b> جنيه</span>
+                <span>• حجم <b>125ml</b></span>
+              </div>
+            </div>
+
+            <div class="kpi" style="margin-top:12px">
+              <div class="k"><b>يزيل الشوائب</b><span>والمكياج</span></div>
+              <div class="k"><b>بدون جفاف</b><span>ملمس مريح</span></div>
+              <div class="k"><b>pH منخفض</b><span>ألطف للبشرة</span></div>
+              <div class="k"><b>بدون عطر</b><span>نباتي</span></div>
+            </div>
+          </div>
+<!-- ✅ GALLERY (READY) -->
+<div class="gallery" aria-label="Gallery">
+  <div class="mainShot" id="mainShot" title="اضغط للتكبير">
+    <span class="mainHint">🔍 اضغط للتكبير</span>
+    <img id="mainImg"
+         src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg"
+         alt="Centella Ampoule Foam"
+         loading="eager">
+  </div>
+
+  <div class="thumbs" id="thumbs" aria-label="Thumbnails">
+    <div class="thumb" aria-current="true"
+         data-src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg">
+      <img src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg" alt="صورة 1" loading="lazy">
+    </div>
+
+    <div class="thumb"
+         data-src="https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg">
+      <img src="https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg" alt="صورة 2" loading="lazy">
+    </div>
+
+    <div class="thumb"
+         data-src="https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg">
+      <img src="https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg" alt="صورة 3" loading="lazy">
+    </div>
+
+    <div class="thumb"
+         data-src="https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg">
+      <img src="https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg" alt="صورة 4" loading="lazy">
+    </div>
+
+    <div class="thumb"
+         data-src="https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg">
+      <img src="https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg" alt="صورة 5" loading="lazy">
+    </div>
+
+    <div class="thumb"
+         data-src="https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg">
+      <img src="https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg" alt="صورة 6" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- ✅ حط دي بدل IMAGES في آخر الكود -->
+<script>
+  const IMAGES = [
+    "https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg",
+    "https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg",
+    "https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg",
+    "https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg",
+    "https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg",
+    "https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg"
+  ];
+</script>
+
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS / ABOUT -->
+    <section class="section toneA" aria-label="About">
+      <div class="sectionHeader">
+        <div>
+          <h2>ليه الغسول ده اختيار ذكي؟</h2>
+          <p>تنضيف فعّال… من غير ما يجرّح الحاجز الواقي</p>
+        </div>
+      </div>
+      <div class="sectionBody">
+        <div class="grid2">
+          <div class="card">
+            <b style="display:block; margin-bottom:6px;">🫧 تنظيف لطيف بذكاء</b>
+            <ul class="list">
+              <li>يزيل بقايا المكياج والدهون الزائدة والشوائب <b>بدون جفاف</b>.</li>
+              <li>مثالي للاستخدام بمفرده أو كخطوة ثانية في <b>التنظيف المزدوج</b>.</li>
+              <li>مواد تنظيف طبيعية مستخلصة من <b>جوز الهند</b> لتنظيف فعّال دون الإضرار بالحاجز.</li>
+              <li><b>منخفض الحموضة (Low pH)</b> لطيف على البشرة اليومية.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <b style="display:block; margin-bottom:6px;">🌿 مكونات داعمة للبشرة</b>
+            <ul class="list">
+              <li><b>Centella Asiatica</b>: تهدئة البشرة ودعم تعافيها.</li>
+              <li><b>خالي من العطور</b>: مناسب للي مش بيحبوا الروائح أو بشرتهم حساسة.</li>
+              <li><b>Vegan</b> + <b>Cruelty-Free</b>.</li>
+              <li>تركيبة رغوية ناعمة وخفيفة—تترك البشرة <b>نضيفة ومرتاحة</b>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section toneB" aria-label="How to use">
+      <div class="sectionHeader">
+        <div>
+          <h2>طريقة الاستخدام</h2>
+          <p>خطوات بسيطة لنتيجة أنضف</p>
+        </div>
+      </div>
+      <div class="sectionBody">
+        <div class="grid2">
+          <div class="card">
+            <ul class="list">
+              <li>بلّلي الوجه بمياه فاترة.</li>
+              <li>خدي كمية صغيرة وافركيها بإيدك لحد ما تعمل رغوة.</li>
+              <li>دلّكي الوجه بلطف 30–60 ثانية ثم اشطفي.</li>
+              <li>استخدميه صباحًا ومساءً حسب احتياج بشرتك.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <b style="display:block; margin-bottom:6px;">✅ مناسب لمين؟</b>
+            <ul class="list">
+              <li>اللي عايز غسول يومي <b>لطيف</b> بدون شد.</li>
+              <li>البشرة الحساسة/المتعبة من الغسولات القوية.</li>
+              <li>اللي بيعمل <b>Double Cleansing</b> (كخطوة ثانية).</li>
+            </ul>
+            <div style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.85;">
+              <b>نصيحة:</b> لو بشرتك ناشفة جدًا—قللي مدة التدليك أو عدد المرات يوميًا.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section toneC" aria-label="FAQ">
+      <div class="sectionHeader">
+        <div>
+          <h2>أسئلة شائعة (7)</h2>
+          <p>كل اللي محتاجاه قبل الطلب</p>
+        </div>
+      </div>
+      <div class="sectionBody">
+        <details>
+          <summary><span class="sumRight">هل الغسول بيسبب جفاف؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">مصمم لتنظيف فعّال بدون جفاف، ومواد التنظيف فيه لطيفة ومناسبة للاستخدام اليومي.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">هل مناسب للبشرة الحساسة؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">أيوه—منخفض الحموضة وخالي من العطور، وبه سنتيلا مهدئة. يفضل اختبار حساسية أول مرة.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">ينفع كغسول لإزالة المكياج؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">ينفع يزيل بقايا المكياج، لكن لو مكياج تقيل/واتر بروف الأفضل مزيل/زيت أولًا ثم الغسول كخطوة ثانية.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">إيه معنى Low pH؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">يعني قريب من توازن البشرة الطبيعي، فيكون ألطف وأقل تهييجًا للحاجز الواقي مع الاستخدام المنتظم.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">هل مناسب للبشرة الدهنية؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">نعم—يساعد على إزالة الدهون الزائدة والشوائب بدون شد مزعج، وده يخليه مناسب للدهنية والمختلطة.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">هل فيه عطر أو كحول؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">خالي من العطور حسب وصف المنتج. ولو تحبي، ابعتي صورة المكونات (INCI) وأقولك التفاصيل بدقة.</div>
+        </details>
+
+        <details>
+          <summary><span class="sumRight">هل المنتج نباتي وخالي من القسوة؟</span><span class="chev">⌄</span></summary>
+          <div class="detailBody">حسب وصفك: نباتي وخالٍ من القسوة (Vegan & Cruelty-Free).</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section toneB" aria-label="Reviews">
+      <div class="sectionHeader">
+        <div>
+          <h2>تقييمات العملاء </h2>
+          
+        </div>
+      </div>
+      <div class="sectionBody">
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “ينضف من غير شد”</span><span class="chev">⌄</span></summary><div class="detailBody">أول غسول ما يسيبش بشرتي مشدودة بعده… إحساس مريح جدًا.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “مناسب للحساسة”</span><span class="chev">⌄</span></summary><div class="detailBody">أنا حساسة من العطور… ده لطيف ومفيهوش ريحة مزعجة.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “حلو للتنظيف المزدوج”</span><span class="chev">⌄</span></summary><div class="detailBody">بعد مزيل المكياج بحطه كخطوة تانية… بيشيل أي بقايا بسهولة.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “رغوته ناعمة”</span><span class="chev">⌄</span></summary><div class="detailBody">الرغوة كريمية وناعمة… ومش بتحسسك إنك بتغسلي بصابون قاسي.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “قلل الإحمرار”</span><span class="chev">⌄</span></summary><div class="detailBody">السنتيلا باينة… بشرتي بقت أهدى مع الاستمرار.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “ينفع للدهنية”</span><span class="chev">⌄</span></summary><div class="detailBody">بينضف الدهون كويس من غير ما يقلبها جفاف وتهيّج.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “أهم حاجة pH منخفض”</span><span class="chev">⌄</span></summary><div class="detailBody">فرق معايا في الحاجز الواقي… بقى أقل تهيّج.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “بشرة نضيفة وطرية”</span><span class="chev">⌄</span></summary><div class="detailBody">بعده بستخدم تونر/مرطب… تحفة كروتين يومي.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “مش بيحرق العين”</span><span class="chev">⌄</span></summary><div class="detailBody">كنت بخاف من الغسولات… ده لطيف حوالين العين.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “ممتاز للشتا”</span><span class="chev">⌄</span></summary><div class="detailBody">في البرد الغسولات بتجففني… ده لا.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “بيشيل بقايا سن سكرين”</span><span class="chev">⌄</span></summary><div class="detailBody">سن سكرين تقيل شوية… وده بيشيله كويس خصوصًا مع تنظيف مزدوج.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “مفيش ريحة”</span><span class="chev">⌄</span></summary><div class="detailBody">أنا بحب المنتجات بدون عطر… ده perfect.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “لطيف يوميًا”</span><span class="chev">⌄</span></summary><div class="detailBody">بستخدمه مرتين في اليوم… ومفيش تهيج.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “قيمة مقابل حجم”</span><span class="chev">⌄</span></summary><div class="detailBody">125ml يقعد فترة… وكمية صغيرة بتكفي.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️ — “مناسب بعد المقشرات”</span><span class="chev">⌄</span></summary><div class="detailBody">لما بستخدم مقشر، ده بيكون ألطف غسول بعدها.</div></details>
+        <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “أفضل غسول لطيف جربته”</span><span class="chev">⌄</span></summary><div class="detailBody">نضيف جدًا من غير ما يحسسني إن بشرتي اتسحبت منها الزيوت كلها.</div></details>
+      </div>
+    </section>
+
+    <!-- WHY TO YOU -->
+    <section class="section toneA" aria-label="Why To You">
+      <div class="sectionHeader">
+        <div>
+          <h2>ليه تشتري من To You؟</h2>
+          <p>ثقة + خدمة + تجربة شراء مريحة</p>
+        </div>
+      </div>
+      <div class="sectionBody">
+        <div class="why">
+          <div class="whyItem"><b>✅ أصلي 100%</b><p>مصادر موثوقة + دعم للتحقق بعد الاستلام.</p></div>
+          <div class="whyItem"><b>🚚 شحن سريع</b><p>تغليف آمن يوصل لك بأفضل حالة.</p></div>
+          <div class="whyItem"><b>💬 دعم واتساب</b><p>نرشح لك روتين مناسب حسب نوع بشرتك.</p></div>
+          <div class="whyItem"><b>🎁 عروض مستمرة</b><p>تابعي العروض والباقات… هتوفر كتير.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      © To You — 2013
+    </footer>
+  </div>
+
+  <!-- LIGHTBOX (will work بعد ما تحط الصور) -->
+  <div class="lb" id="lb" aria-hidden="true">
+    <div class="lbBox" role="dialog" aria-label="Image preview">
+      <button class="lbClose" id="lbClose" aria-label="Close">×</button>
+      <div class="lbNav lbPrev" id="lbPrev" aria-label="Previous">›</div>
+      <div class="lbNav lbNext" id="lbNext" aria-label="Next">‹</div>
+      <img class="lbImg" id="lbImg" src="" alt="Preview">
+    </div>
+  </div>
+
+  <script>
+    /*
+      ✅ بعد ما تجيب لينكات الصور:
+      1) بدّل IMAGES باللينكات (6 صور أو أكتر)
+      2) فعّل <img id="mainImg"...> في الـ HTML (وشيل الـ placeholder)
+      3) بدل محتوى الـ thumbs إلى صور صغيرة (أنا أعملهولك لو بعت الروابط)
+    */
+
+    const IMAGES = [
+      "IMAGE_1_URL",
+      "IMAGE_2_URL",
+      "IMAGE_3_URL",
+      "IMAGE_4_URL",
+      "IMAGE_5_URL",
+      "IMAGE_6_URL"
+    ];
+
+    // لو لسه placeholders، مش هنشغّل السواب/اللايتبوكس
+    const isPlaceholder = IMAGES.some(u => (u || "").includes("IMAGE_"));
+    if(!isPlaceholder){
+      // Main image
+      let idx = 0;
+      const mainImg = document.getElementById("mainImg"); // لازم يكون موجود بعد ما تفعل img
+      const mainShot = document.getElementById("mainShot");
+      const thumbs = Array.from(document.querySelectorAll("#thumbs .thumb"));
+
+      function setActive(i){
+        idx = i;
+        mainImg.src = IMAGES[i];
+        thumbs.forEach((t, k) => t.setAttribute("aria-current", k===i ? "true":"false"));
+      }
+
+      thumbs.forEach((t, i) => t.addEventListener("click", () => setActive(i)));
+
+      // Lightbox
+      const lb = document.getElementById("lb");
+      const lbImg = document.getElementById("lbImg");
+      const lbClose = document.getElementById("lbClose");
+      const lbPrev = document.getElementById("lbPrev");
+      const lbNext = document.getElementById("lbNext");
+
+      function openLB(){
+        lbImg.src = IMAGES[idx];
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden","false");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLB(){
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden","true");
+        document.body.style.overflow = "";
+      }
+      function prev(){ setActive((idx - 1 + IMAGES.length) % IMAGES.length); lbImg.src = IMAGES[idx]; }
+      function next(){ setActive((idx + 1) % IMAGES.length); lbImg.src = IMAGES[idx]; }
+
+      mainShot.addEventListener("click", openLB);
+      lbClose.addEventListener("click", closeLB);
+      lbPrev.addEventListener("click", prev);
+      lbNext.addEventListener("click", next);
+      lb.addEventListener("click", (e) => { if(e.target === lb) closeLB(); });
+
+      window.addEventListener("keydown", (e) => {
+        if(!lb.classList.contains("open")) return;
+        if(e.key === "Escape") closeLB();
+        if(e.key === "ArrowLeft") next();
+        if(e.key === "ArrowRight") prev();
+      });
+    }
+  </script>
+</body>
+</html>
