@@ -11,7 +11,6 @@
   <meta property="og:type" content="product" />
   <meta property="og:title" content="SKIN1004 Centella Ampoule Foam | رغوة تنظيف لطيفة 125ml" />
   <meta property="og:description" content="تنظيف لطيف يزيل المكياج والدهون والشوائب بدون جفاف. pH منخفض، بدون عطر، نباتي وخالي من القسوة." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1585232351009-aa87416fca90?auto=format&fit=crop&w=1200&q=60" />
 
   <!-- Font (optional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,17 +59,26 @@
     a{color:inherit}
     .wrap{max-width:var(--max); margin:auto; padding:18px 14px 80px}
 
+    /* ✅ TOPBAR ثابت (مش sticky) */
     .topbar{
       display:flex; align-items:center; justify-content:space-between;
       gap:12px;
       padding:10px 12px;
       border:1px solid var(--stroke);
       border-radius:999px;
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.86);
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 26px rgba(16,24,40,.06);
-      position:sticky; top:10px; z-index:20;
+      position:fixed;
+      top:10px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(var(--max), calc(100% - 28px));
+      z-index:200;
     }
+    /* مساحة تحت التوب بار علشان مايغطيش الهيرو */
+    .topbarSpacer{height:64px}
+
     .brandMark{
       display:flex; align-items:center; gap:10px;
       font-weight:800; letter-spacing:.2px;
@@ -84,6 +92,7 @@
     .pill{
       display:flex; align-items:center; gap:8px; flex-wrap:wrap;
       font-size:13px; color:var(--muted);
+      justify-content:flex-end;
     }
     .badge{
       display:inline-flex; align-items:center; gap:8px;
@@ -200,16 +209,10 @@
       font-weight:900;
     }
 
-    .heroGrid{
-      display:grid;
-      gap:14px;
-    }
+    .heroGrid{display:grid; gap:14px;}
     @media (min-width: 980px){
       .heroInner{padding:22px 22px 18px}
-      .heroGrid{
-        grid-template-columns: 1.05fr .95fr;
-        align-items:start;
-      }
+      .heroGrid{grid-template-columns: 1.05fr .95fr; align-items:start;}
       h1{font-size:34px}
       .sub{font-size:16px}
     }
@@ -229,26 +232,15 @@
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       flex-wrap:wrap;
     }
-    .sectionHeader h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .sectionHeader p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-    }
+    .sectionHeader h2{margin:0; font-size:18px; letter-spacing:.2px;}
+    .sectionHeader p{margin:0; color:var(--muted); font-size:13px;}
     .sectionBody{padding:14px}
     .toneA{background:linear-gradient(180deg, rgba(191,212,230,.22), rgba(255,255,255,.84))}
     .toneB{background:linear-gradient(180deg, rgba(233,236,241,.58), rgba(255,255,255,.84))}
     .toneC{background:linear-gradient(180deg, rgba(159,187,212,.16), rgba(255,255,255,.84))}
 
-    /* GALLERY PLACEHOLDER */
-    .gallery{
-      display:grid;
-      gap:12px;
-    }
+    /* ✅ GALLERY */
+    .gallery{display:grid; gap:12px;}
     .mainShot{
       position:relative;
       border-radius:22px;
@@ -261,24 +253,12 @@
       display:grid;
       place-items:center;
     }
-    .mainShot .ph{
-      text-align:center;
-      padding:18px;
-      color:var(--muted);
-      line-height:1.9;
-      max-width: 520px;
-    }
-    .ph b{color:var(--ink)}
-    .ph code{
-      display:inline-block;
-      direction:ltr;
-      padding:4px 8px;
-      border-radius:10px;
-      border:1px solid var(--stroke);
-      background:rgba(233,236,241,.55);
-      color:var(--ink);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:12px;
+    .mainShot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      min-height: 260px;
     }
     .mainHint{
       position:absolute;
@@ -291,6 +271,7 @@
       color:var(--muted);
       font-size:12px;
       backdrop-filter: blur(10px);
+      z-index:2;
     }
     .thumbs{
       display:grid;
@@ -309,13 +290,14 @@
       position:relative;
       aspect-ratio: 1 / 1;
       display:grid; place-items:center;
+      transition: transform .15s ease;
     }
-    .thumb .miniPh{
-      text-align:center;
-      color:var(--muted);
-      font-size:12px;
-      padding:10px;
-      line-height:1.6;
+    .thumb:hover{transform: translateY(-1px)}
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
     .thumb[aria-current="true"]{
       outline: 3px solid rgba(159,187,212,.65);
@@ -323,12 +305,8 @@
     }
 
     /* CONTENT GRID */
-    .grid2{
-      display:grid; gap:12px;
-    }
-    @media (min-width: 900px){
-      .grid2{grid-template-columns: 1fr 1fr;}
-    }
+    .grid2{display:grid; gap:12px;}
+    @media (min-width: 900px){ .grid2{grid-template-columns: 1fr 1fr;} }
     .card{
       border:1px solid var(--stroke);
       border-radius:20px;
@@ -346,9 +324,7 @@
       display:grid; gap:10px;
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (min-width: 520px){
-      .kpi{grid-template-columns: repeat(4, 1fr);}
-    }
+    @media (min-width: 520px){ .kpi{grid-template-columns: repeat(4, 1fr);} }
     .k{
       border:1px solid var(--stroke);
       border-radius:18px;
@@ -386,21 +362,11 @@
       transition: transform .18s ease;
     }
     details[open] .chev{transform: rotate(180deg)}
-    .detailBody{
-      margin-top:10px;
-      color:var(--muted);
-      line-height:1.95;
-      font-size:14px;
-    }
+    .detailBody{margin-top:10px; color:var(--muted); line-height:1.95; font-size:14px;}
 
     /* WHY BUY */
-    .why{
-      display:grid; gap:10px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 860px){
-      .why{grid-template-columns: repeat(4, 1fr);}
-    }
+    .why{display:grid; gap:10px; grid-template-columns: 1fr;}
+    @media (min-width: 860px){ .why{grid-template-columns: repeat(4, 1fr);} }
     .whyItem{
       border:1px solid var(--stroke);
       border-radius:20px;
@@ -410,29 +376,6 @@
     .whyItem b{display:flex; align-items:center; gap:8px}
     .whyItem p{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.85}
 
-    /* FORM PLACEHOLDER */
-    .formBox{
-      border:1px dashed rgba(16,24,40,.22);
-      border-radius:22px;
-      padding:14px;
-      background:rgba(255,255,255,.80);
-      color:var(--muted);
-      line-height:1.95;
-    }
-    .formBox code{
-      display:block;
-      margin-top:10px;
-      padding:10px;
-      border-radius:16px;
-      background:rgba(233,236,241,.62);
-      border:1px solid var(--stroke);
-      color:var(--ink);
-      direction:ltr;
-      overflow:auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size:12px;
-    }
-
     /* LIGHTBOX */
     .lb{
       position:fixed;
@@ -441,7 +384,7 @@
       display:none;
       align-items:center;
       justify-content:center;
-      z-index:60;
+      z-index:300;
       padding:18px;
     }
     .lb.open{display:flex}
@@ -456,12 +399,7 @@
       box-shadow: 0 24px 90px rgba(0,0,0,.35);
       position:relative;
     }
-    .lbImg{
-      width:100%;
-      height:auto;
-      display:block;
-      background:#fff;
-    }
+    .lbImg{width:100%; height:auto; display:block; background:#fff;}
     .lbClose{
       position:absolute;
       top:10px; left:10px;
@@ -504,6 +442,7 @@
 
 <body>
   <div class="wrap">
+    <!-- ✅ TOPBAR ثابت فوق -->
     <div class="topbar" aria-label="Top bar">
       <div class="brandMark">
         <span class="dot" aria-hidden="true"></span>
@@ -516,6 +455,7 @@
         <span class="badge">⚖️ pH منخفض</span>
       </div>
     </div>
+    <div class="topbarSpacer" aria-hidden="true"></div>
 
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
@@ -558,64 +498,40 @@
               <div class="k"><b>بدون عطر</b><span>نباتي</span></div>
             </div>
           </div>
-<!-- ✅ GALLERY (READY) -->
-<div class="gallery" aria-label="Gallery">
-  <div class="mainShot" id="mainShot" title="اضغط للتكبير">
-    <span class="mainHint">🔍 اضغط للتكبير</span>
-    <img id="mainImg"
-         src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg"
-         alt="Centella Ampoule Foam"
-         loading="eager">
-  </div>
 
-  <div class="thumbs" id="thumbs" aria-label="Thumbnails">
-    <div class="thumb" aria-current="true"
-         data-src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg">
-      <img src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg" alt="صورة 1" loading="lazy">
-    </div>
+          <!-- ✅ GALLERY -->
+          <div class="gallery" aria-label="Gallery">
+            <div class="mainShot" id="mainShot" title="اضغط للتكبير">
+              <span class="mainHint">🔍 اضغط للتكبير</span>
+              <img id="mainImg"
+                   src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg"
+                   alt="Centella Ampoule Foam"
+                   loading="eager">
+            </div>
 
-    <div class="thumb"
-         data-src="https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg">
-      <img src="https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg" alt="صورة 2" loading="lazy">
-    </div>
-
-    <div class="thumb"
-         data-src="https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg">
-      <img src="https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg" alt="صورة 3" loading="lazy">
-    </div>
-
-    <div class="thumb"
-         data-src="https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg">
-      <img src="https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg" alt="صورة 4" loading="lazy">
-    </div>
-
-    <div class="thumb"
-         data-src="https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg">
-      <img src="https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg" alt="صورة 5" loading="lazy">
-    </div>
-
-    <div class="thumb"
-         data-src="https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg">
-      <img src="https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg" alt="صورة 6" loading="lazy">
-    </div>
-  </div>
-</div>
-
-<!-- ✅ حط دي بدل IMAGES في آخر الكود -->
-<script>
-  const IMAGES = [
-    "https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg",
-    "https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg",
-    "https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg",
-    "https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg",
-    "https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg",
-    "https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg"
-  ];
-</script>
-
-            
-            
+            <div class="thumbs" id="thumbs" aria-label="Thumbnails">
+              <div class="thumb" aria-current="true" data-index="0">
+                <img src="https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg" alt="صورة 1" loading="lazy">
+              </div>
+              <div class="thumb" data-index="1">
+                <img src="https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg" alt="صورة 2" loading="lazy">
+              </div>
+              <div class="thumb" data-index="2">
+                <img src="https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg" alt="صورة 3" loading="lazy">
+              </div>
+              <div class="thumb" data-index="3">
+                <img src="https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg" alt="صورة 4" loading="lazy">
+              </div>
+              <div class="thumb" data-index="4">
+                <img src="https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg" alt="صورة 5" loading="lazy">
+              </div>
+              <div class="thumb" data-index="5">
+                <img src="https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg" alt="صورة 6" loading="lazy">
+              </div>
+            </div>
           </div>
+          <!-- /GALLERY -->
+
         </div>
       </div>
     </section>
@@ -699,32 +615,26 @@
           <summary><span class="sumRight">هل الغسول بيسبب جفاف؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">مصمم لتنظيف فعّال بدون جفاف، ومواد التنظيف فيه لطيفة ومناسبة للاستخدام اليومي.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">هل مناسب للبشرة الحساسة؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">أيوه—منخفض الحموضة وخالي من العطور، وبه سنتيلا مهدئة. يفضل اختبار حساسية أول مرة.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">ينفع كغسول لإزالة المكياج؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">ينفع يزيل بقايا المكياج، لكن لو مكياج تقيل/واتر بروف الأفضل مزيل/زيت أولًا ثم الغسول كخطوة ثانية.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">إيه معنى Low pH؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">يعني قريب من توازن البشرة الطبيعي، فيكون ألطف وأقل تهييجًا للحاجز الواقي مع الاستخدام المنتظم.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">هل مناسب للبشرة الدهنية؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">نعم—يساعد على إزالة الدهون الزائدة والشوائب بدون شد مزعج، وده يخليه مناسب للدهنية والمختلطة.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">هل فيه عطر أو كحول؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">خالي من العطور حسب وصف المنتج. ولو تحبي، ابعتي صورة المكونات (INCI) وأقولك التفاصيل بدقة.</div>
         </details>
-
         <details>
           <summary><span class="sumRight">هل المنتج نباتي وخالي من القسوة؟</span><span class="chev">⌄</span></summary>
           <div class="detailBody">حسب وصفك: نباتي وخالٍ من القسوة (Vegan & Cruelty-Free).</div>
@@ -735,10 +645,7 @@
     <!-- REVIEWS -->
     <section class="section toneB" aria-label="Reviews">
       <div class="sectionHeader">
-        <div>
-          <h2>تقييمات العملاء </h2>
-          
-        </div>
+        <div><h2>تقييمات العملاء</h2></div>
       </div>
       <div class="sectionBody">
         <details><summary><span class="sumRight">⭐️⭐️⭐️⭐️⭐️ — “ينضف من غير شد”</span><span class="chev">⌄</span></summary><div class="detailBody">أول غسول ما يسيبش بشرتي مشدودة بعده… إحساس مريح جدًا.</div></details>
@@ -778,13 +685,10 @@
       </div>
     </section>
 
-
-    <footer>
-      © To You — 2013
-    </footer>
+    <footer>© To You — 2013</footer>
   </div>
 
-  <!-- LIGHTBOX (will work بعد ما تحط الصور) -->
+  <!-- LIGHTBOX -->
   <div class="lb" id="lb" aria-hidden="true">
     <div class="lbBox" role="dialog" aria-label="Image preview">
       <button class="lbClose" id="lbClose" aria-label="Close">×</button>
@@ -795,73 +699,74 @@
   </div>
 
   <script>
-    /*
-      ✅ بعد ما تجيب لينكات الصور:
-      1) بدّل IMAGES باللينكات (6 صور أو أكتر)
-      2) فعّل <img id="mainImg"...> في الـ HTML (وشيل الـ placeholder)
-      3) بدل محتوى الـ thumbs إلى صور صغيرة (أنا أعملهولك لو بعت الروابط)
-    */
-
+    /* ✅ صور المنتج */
     const IMAGES = [
-      "IMAGE_1_URL",
-      "IMAGE_2_URL",
-      "IMAGE_3_URL",
-      "IMAGE_4_URL",
-      "IMAGE_5_URL",
-      "IMAGE_6_URL"
+      "https://i.postimg.cc/NMNqY341/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٥.jpg",
+      "https://i.postimg.cc/gJMFdCD3/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٤.jpg",
+      "https://i.postimg.cc/wvW8HCVm/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٣.jpg",
+      "https://i.postimg.cc/j580KpXw/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٢.jpg",
+      "https://i.postimg.cc/NMNqY34K/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠١.jpg",
+      "https://i.postimg.cc/cHDyZpm6/photo_٢٠٢٦_٠١_٠٥_١٥_٥٨_٠٠.jpg"
     ];
 
-    // لو لسه placeholders، مش هنشغّل السواب/اللايتبوكس
-    const isPlaceholder = IMAGES.some(u => (u || "").includes("IMAGE_"));
-    if(!isPlaceholder){
-      // Main image
-      let idx = 0;
-      const mainImg = document.getElementById("mainImg"); // لازم يكون موجود بعد ما تفعل img
-      const mainShot = document.getElementById("mainShot");
-      const thumbs = Array.from(document.querySelectorAll("#thumbs .thumb"));
+    /* ✅ تبديل الصورة الكبيرة عند الضغط على الصور الصغيرة */
+    let idx = 0;
+    const mainImg = document.getElementById("mainImg");
+    const mainShot = document.getElementById("mainShot");
+    const thumbs = Array.from(document.querySelectorAll("#thumbs .thumb"));
 
-      function setActive(i){
-        idx = i;
-        mainImg.src = IMAGES[i];
-        thumbs.forEach((t, k) => t.setAttribute("aria-current", k===i ? "true":"false"));
-      }
-
-      thumbs.forEach((t, i) => t.addEventListener("click", () => setActive(i)));
-
-      // Lightbox
-      const lb = document.getElementById("lb");
-      const lbImg = document.getElementById("lbImg");
-      const lbClose = document.getElementById("lbClose");
-      const lbPrev = document.getElementById("lbPrev");
-      const lbNext = document.getElementById("lbNext");
-
-      function openLB(){
-        lbImg.src = IMAGES[idx];
-        lb.classList.add("open");
-        lb.setAttribute("aria-hidden","false");
-        document.body.style.overflow = "hidden";
-      }
-      function closeLB(){
-        lb.classList.remove("open");
-        lb.setAttribute("aria-hidden","true");
-        document.body.style.overflow = "";
-      }
-      function prev(){ setActive((idx - 1 + IMAGES.length) % IMAGES.length); lbImg.src = IMAGES[idx]; }
-      function next(){ setActive((idx + 1) % IMAGES.length); lbImg.src = IMAGES[idx]; }
-
-      mainShot.addEventListener("click", openLB);
-      lbClose.addEventListener("click", closeLB);
-      lbPrev.addEventListener("click", prev);
-      lbNext.addEventListener("click", next);
-      lb.addEventListener("click", (e) => { if(e.target === lb) closeLB(); });
-
-      window.addEventListener("keydown", (e) => {
-        if(!lb.classList.contains("open")) return;
-        if(e.key === "Escape") closeLB();
-        if(e.key === "ArrowLeft") next();
-        if(e.key === "ArrowRight") prev();
-      });
+    function setActive(i){
+      idx = i;
+      mainImg.src = IMAGES[i];
+      thumbs.forEach((t, k) => t.setAttribute("aria-current", k===i ? "true":"false"));
     }
+
+    thumbs.forEach((t) => {
+      t.addEventListener("click", () => {
+        const i = Number(t.dataset.index || 0);
+        setActive(i);
+      });
+    });
+
+    /* ✅ Lightbox */
+    const lb = document.getElementById("lb");
+    const lbImg = document.getElementById("lbImg");
+    const lbClose = document.getElementById("lbClose");
+    const lbPrev = document.getElementById("lbPrev");
+    const lbNext = document.getElementById("lbNext");
+
+    function openLB(){
+      lbImg.src = IMAGES[idx];
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden","false");
+      document.body.style.overflow = "hidden";
+    }
+    function closeLB(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden","true");
+      document.body.style.overflow = "";
+    }
+    function prev(){
+      setActive((idx - 1 + IMAGES.length) % IMAGES.length);
+      lbImg.src = IMAGES[idx];
+    }
+    function next(){
+      setActive((idx + 1) % IMAGES.length);
+      lbImg.src = IMAGES[idx];
+    }
+
+    mainShot.addEventListener("click", openLB);
+    lbClose.addEventListener("click", closeLB);
+    lbPrev.addEventListener("click", prev);
+    lbNext.addEventListener("click", next);
+    lb.addEventListener("click", (e) => { if(e.target === lb) closeLB(); });
+
+    window.addEventListener("keydown", (e) => {
+      if(!lb.classList.contains("open")) return;
+      if(e.key === "Escape") closeLB();
+      if(e.key === "ArrowLeft") next();
+      if(e.key === "ArrowRight") prev();
+    });
   </script>
 </body>
 </html>
